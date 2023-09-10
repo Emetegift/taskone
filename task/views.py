@@ -6,8 +6,8 @@ from django.views.decorators.http import require_GET
 import datetime
 
 @require_GET
-def api_endpoint(request):
-    slack_name = request.GET.get('slack_name', 'Gift Emete')
+def endpoint_view(request):
+    slack_name = request.GET.get('slack_name', 'example_name')
     track = request.GET.get('track', 'backend')
 
     # Get current day of the week
