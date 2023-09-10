@@ -18,7 +18,7 @@ def api_endpoint(request):
 
     # Replace 'username', 'repo', and 'file_name.ext' with your actual GitHub details
     github_file_url = "https://github.com/Emetegift/taskone"
-    github_repo_url = "git remote add origin https://github.com/Emetegift/taskone.git"
+    github_repo_url = "https://github.com/Emetegift/taskone/blob/main/taskone.ext"
 
     response_data = {
         "slack_name": slack_name,
@@ -29,9 +29,5 @@ def api_endpoint(request):
         "github_repo_url": github_repo_url,
         "status_code": 200
     }
-
-
-
-
 
     return JsonResponse(response_data)
