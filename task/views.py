@@ -6,7 +6,7 @@ from django.views.decorators.http import require_GET
 import datetime
 
 @require_GET
-def endpoint_view(request):
+def api_endpoint(request):
     slack_name = request.GET.get('slack_name', 'Gift Emete')
     track = request.GET.get('track', 'backend')
 
@@ -29,5 +29,9 @@ def endpoint_view(request):
         "github_repo_url": github_repo_url,
         "status_code": 200
     }
+
+
+
+
 
     return JsonResponse(response_data)

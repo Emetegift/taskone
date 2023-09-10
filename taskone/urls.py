@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from task.views import  endpoint_view
+from task import views
 
 urlpatterns = [
-    path('',  endpoint_view),
+    path('api/', views.api_endpoint, name='api_endpoint'),
     path('admin/', admin.site.urls),
     
 ]
