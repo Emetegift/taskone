@@ -20,8 +20,8 @@ def endpoint_view(request):
     current_utc_time = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
     # Replace 'username', 'repo', and 'file_name.ext' with your actual GitHub details
-    github_file_url = "https://github.com/Emetegift/repo/blob/main/hgnx-task1.ext"
-    github_repo_url = "git remote add origin https://github.com/Emetegift/hgnx-task1.git"
+    github_file_url = "https://github.com/Emetegift/taskone"
+    github_repo_url = "git remote add origin https://github.com/Emetegift/taskone.git"
 
     response_data = {
         "slack_name": slack_name,
