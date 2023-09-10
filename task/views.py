@@ -10,16 +10,14 @@ def api_endpoint(request):
     slack_name = request.GET.get('slack_name', 'Gift Emete')
     track = request.GET.get('track', 'backend')
 
-    # Get current day of the week
     current_day = datetime.datetime.now().strftime("%A")
 
     # Get current UTC time
     current_utc_time = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
     # Replace 'username', 'repo', and 'file_name.ext' with your actual GitHub details
-    github_file_url = "https://github.com/Emetegift/taskone"
-    github_repo_url = "https://github.com/Emetegift/taskone/blob/main/taskone.ext"
-
+    github_file_url = "https://github.com/Emetegift/taskone/blob/main/app/views.py"
+    github_repo_url = "https://github.com/Emetegift/taskone"
     response_data = {
         "slack_name": slack_name,
         "current_day": current_day,
